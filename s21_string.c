@@ -5,15 +5,15 @@
 
 int main(void) {
 
-  char str1[] = {1,2,10};
-  char str2[] = {1,2,30};
+    char src[] = "hello";
+    char dest[6];
 
-  int res = s21_memcmp(str1,str2, 3);
-int r = memcmp(str1,str2, 3);
-
-    printf("MY = %d\n", res);
-
-   printf("ORIGIN = %d\n", r);
+ 
+       s21_memcpy(&dest, &src,sizeof(dest));
+        memcpy(&dest,&src,sizeof(dest));
+  
+   printf("ORIGIN = %s\n", dest);
+   printf("s21 = %s\n", dest);
 
   return 0;
 }

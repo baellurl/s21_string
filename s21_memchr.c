@@ -1,5 +1,9 @@
 #include "s21_string.h"
 
+
+//Выполняет поиск первого вхождения символа c (беззнаковый тип)
+// в первых n байтах строки, на которую указывает аргумент str.
+
 void *s21_memchr(const void *str, int __c, s21_size_t __n) {
 
   const unsigned char *p = (const unsigned char *)str;
@@ -10,8 +14,6 @@ void *s21_memchr(const void *str, int __c, s21_size_t __n) {
     }
   }   
 
- 
-      
       return s21_NULL;
    
     

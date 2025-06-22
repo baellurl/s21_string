@@ -11,7 +11,7 @@ typedef unsigned long s21_size_t; // 8 bytes
 
 void *s21_memchr(const void *str, int __c, s21_size_t __n);
 int s21_memcmp(const void *str1, const void *str2, s21_size_t __n);
-
+void *s21_memcpy(void *dest, const void *src, s21_size_t n);
 
 
 #endif
