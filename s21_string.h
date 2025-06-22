@@ -5,7 +5,6 @@
 
 
 
-
 typedef unsigned long s21_size_t; // 8 bytes
 #define s21_NULL ((void *)0) 
 
