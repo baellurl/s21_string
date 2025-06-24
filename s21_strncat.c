@@ -6,14 +6,25 @@
 
 char *s21_strncat(char *dest, const char *src, s21_size_t __n){
 
-for(s21_size_t i = 0; i < __n; i++){
+s21_size_t i = 0, j = 0;
 
-if(src[i] == '\0'){
-    src = &dest[i];
+while (dest[i] != '\0')
+{
+    i++;
 }
-return src;
 
+while (src[j] != '\0' && j < __n )
+{
+    dest[i] = src[j];
+    i++;
+    j++;
 }
+dest[i] = '\0';
+
+return dest;
+
+
+
 
 
 }
