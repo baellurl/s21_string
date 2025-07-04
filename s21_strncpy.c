@@ -1,27 +1,19 @@
 #include "s21_string.h"
 
-
 //Копирует до n символов из строки, на которую указывает src, в dest.
 
-char *s21_strncpy(char *dest, const char *src, s21_size_t n){
+char *s21_strncpy(char *dest, const char *src, s21_size_t __n) {
 
-s21_size_t i = 0;
+  s21_size_t i = 0;
 
-for(; i < n && src[i] != '\0'; i++){
+  for (; i < __n && src[i] != '\0'; i++) {
+    dest[i] = src[i];
+  }
 
-dest[i] = src[i];
-}
-
-while (i < n)
-{
+  if (i < __n) {
     dest[i] = '\0';
     i++;
+  }
+
+  return dest;
 }
-
-return dest;
-
-}
-
-
-
-
