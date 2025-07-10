@@ -16,28 +16,26 @@ char *s21_strtok(char *str, const char *delim) {
         break;
       }
     }
-    if (!flag) break;
+    if (!flag)
+      break;
     pos++;
   }
 
   char *start_token = &str[pos]; // запоминаем позицию токена
-s21_size_t j = 0, k = 0;
+  s21_size_t j = 0, k = 0;
 
-while (start_token[j] != '\0')
-{
+  while (start_token[j] != '\0') {
     int flags = 0;
-    for ( k = 0; delim[k] != '\0' ; k++)
-    {
-        if(start_token[j] == delim[k]){
-            start_token[j] = '\0';
-            flags = 1;
-            break;
-        }
-
+    for (k = 0; delim[k] != '\0'; k++) {
+      if (start_token[j] == delim[k]) {
+        start_token[j] = '\0';
+        flags = 1;
+        break;
+      }
     }
-   if(flags) break; 
+    if (flags)
+      break;
     j++;
-}
-return start_token;
-
+  }
+  return start_token;
 }
